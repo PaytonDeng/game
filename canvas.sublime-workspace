@@ -1,0 +1,381 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"co",
+				"context"
+			],
+			[
+				"cen",
+				"centerX"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"ta",
+				"target	Attr"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"lbe",
+				"label	Tag"
+			],
+			[
+				"inlen",
+				"inline-block"
+			],
+			[
+				"marin",
+				"margin-left"
+			],
+			[
+				"la",
+				"layout"
+			],
+			[
+				"ch",
+				"checkBoundaries"
+			],
+			[
+				"onMous",
+				"onMouseMove"
+			],
+			[
+				"re",
+				"removeEventListener"
+			],
+			[
+				"bo",
+				"bottom"
+			],
+			[
+				"ang",
+				"angleY"
+			],
+			[
+				"an",
+				"angleX"
+			],
+			[
+				"off",
+				"offsetTop"
+			],
+			[
+				"sc",
+				"scrollTop"
+			],
+			[
+				"doc",
+				"documentElement"
+			],
+			[
+				"cl",
+				"clientY"
+			],
+			[
+				"scr",
+				"scrollLeft"
+			],
+			[
+				"pa",
+				"pageX"
+			],
+			[
+				"on",
+				"onMouseEvent"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 58.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os; pr='Preferences.sublime-settings'; ip='ignored_packages'; n='Package Control'; s=sublime.load_settings(pr); ig=s.get(ip); ig.append(n); s.set(ip,ig); sublime.save_settings('Preferences.sublime-settings'); pf=n+'.sublime-package'; urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler())); by=urllib.request.urlopen('https://packagecontrol.io/'+pf.replace(' ','%20')).read(); open(os.path.join(sublime.installed_packages_path(),pf),'wb').write(by); ig.remove(n); s.set(ip,ig); sublime.save_settings(pr); print('Package Control: 3.0.0 upgrade successful!')",
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Administrator/Desktop/t1.sql",
+		"/C/Users/Administrator/Documents/Navicat/Premium/profiles/vgroup.xml",
+		"/C/Users/Administrator/Documents/Navicat/Premium/logs/LogExport.txt",
+		"/C/Users/Administrator/Documents/Navicat/Premium/logs/LogHistory.txt",
+		"/D/我的文档/html5/微信开发.txt",
+		"/D/www/test.php",
+		"/D/www/info.php",
+		"/D/我的文档/每日一记/jQuery插件.txt",
+		"/D/web/php/php5.3.28/php.ini",
+		"/D/我的文档/每日一记/2015.01.10.txt",
+		"/D/www/index.php",
+		"/D/www/mapABC.php",
+		"/D/www/PHPExcel_1.7.9_doc/exportTable.php",
+		"/E/PHP视频教程/PHP教学视频/ReadMe.txt",
+		"/D/www/slider.html",
+		"/D/www/time.html",
+		"/D/www/form.php",
+		"/D/cache_index.db",
+		"/D/我的文档/mobile/男人一生要做的50件事.txt",
+		"/D/我的文档/mobile/5四只老鼠吹牛甲我每天都拿鼠药当糖吃;乙.txt",
+		"/D/Program Files/Sublime Text 3/LAMP源码安装.txt",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/D/www/Image.php",
+		"/F/movies/说明.txt",
+		"/C/Users/Administrator/Desktop/scrool.html",
+		"/D/www/html5/game/js/ball.js",
+		"/D/www/html5/game/rotate.html",
+		"/D/我的文档/mi.txt",
+		"/D/www/html5/game/ball.html",
+		"/C/Users/Administrator/Desktop/html5Amazing.html",
+		"/F/download/htaccess",
+		"/D/www/html5/game/index.html",
+		"/D/www/html5/game/wave.html",
+		"/D/www/html5/game/velocity.html",
+		"/D/www/html5/game/spray-paint.html",
+		"/D/www/html5/game/ship-sim.html",
+		"/D/www/html5/game/bubble1.html",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/D/www/html5/game/bubble.html",
+		"/D/www/html5/game/bubble-1.html",
+		"/D/www/ZF/网站.txt",
+		"/D/www/ZF/vsftp.txt",
+		"/D/www/ZF/vsftpd.conf",
+		"/C/Users/Administrator/Desktop/index.php",
+		"/D/www/ZF/website/mgf/protected/config/main.php",
+		"/D/www/ZF/website/mgfReadme.txt",
+		"/D/www/ZF/website/mgf/index.php",
+		"/D/www/ZF/website/mgf/protected/admin/config/main.php",
+		"/D/www/ZF/website/mgf.sql",
+		"/D/www/ZF/website/protected/config/main.php",
+		"/D/www/ZF/agent/protected/views/layouts/index.php",
+		"/D/www/ZF/agent/protected/views/site/agency.php",
+		"/D/www/ZF/agent/protected/models/Angency.php",
+		"/D/www/ZF/agent/protected/controllers/SiteController.php",
+		"/D/www/ZF/agent/style/js/scroll.js",
+		"/C/Users/Administrator/Desktop/scroll.html",
+		"/D/www/ZF/agent/style/css/page.css",
+		"/D/www/ZF/agent/style/tc/css/order.css",
+		"/C/Users/Administrator/Desktop/index.html",
+		"/D/www/ZF/agent/protected/config/main.php",
+		"/D/www/ZF/agent/css/form.css",
+		"/D/www/ZF/kemeilin/cpxq.html",
+		"/D/www/ZF/agent/index.php",
+		"/D/www/ZF/agent/protected/views/site/index.php",
+		"/D/www/ZF/agent/protected/views/layouts/main.php",
+		"/D/www/ZF/agent/style/tc/css/kefu.css",
+		"/D/www/ZF/agent/classes/mysql.php",
+		"/D/www/ZF/e-change/index.php",
+		"/D/www/ZF/e-change/data/common.inc.php",
+		"/D/www/ZF/e-change/echange_ruimin.sql",
+		"/D/www/ZF/e-change/tags.php",
+		"/D/www/html5/game/spring.html",
+		"/D/www/ZF/vhost.conf",
+		"/D/www/html5/game/throwing.html",
+		"/C/Users/Administrator/Desktop/vhost.conf",
+		"/E/carmen/3d album/index.html",
+		"/D/www/html5/game/mouse-event.html",
+		"/D/www/html5/game/fountain.html",
+		"/D/www/html5/game/js/utils.js",
+		"/E/dangdang.html",
+		"/E/aplus_v2.js",
+		"/C/Users/DPC/Desktop/myfocus.js",
+		"/D/wamp/www/images/fox.css",
+		"/D/wamp/www/images/skin.css",
+		"/F/下载专用/扫毒国粤双语高清BD-MKV.txt",
+		"/D/wamp/www/lab/socket.php",
+		"/D/wamp/www/lab/client.php",
+		"/D/wamp/bin/apache/apache2.2.22/bin/php.ini",
+		"/D/wamp/www/lab/server.php",
+		"/D/wamp/www/lab/cli.php",
+		"/D/wamp/bin/apache/apache2.2.22/conf/httpd.conf",
+		"/D/wamp/bin/php/php5.3.13/php.ini",
+		"/D/mac share/index.php",
+		"/D/wamp/www/html5/game/test.html",
+		"/D/wamp/www/html5/game/multi-curve.html",
+		"/D/wamp/www/html5/game/js/utils.js",
+		"/C/Users/DPC/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/D/我的文档/BitLocker 恢复密钥 592D6321-883D-4117-B0FF-1B2B1F626677.txt",
+		"/D/wamp/www/html5/game/template.html",
+		"/D/我的文档/需要了解.txt",
+		"/D/我的文档/每日一记/2013-12-09.txt",
+		"/D/我的文档/每日一记/2013-11-08.txt",
+		"/D/我的文档/sublimeText2快捷键.txt",
+		"/D/wamp/www/html5/game/mouseDistancel.html",
+		"/C/Users/DPC/Desktop/index.html",
+		"/C/Users/DPC/Desktop/style.css",
+		"/F/下载专用/FlashFXPliehuo/quick.dat",
+		"/F/下载专用/FlashFXPliehuo/Language/Chinese Simplified.dlf",
+		"/F/下载专用/FlashFXPliehuo/FlashFXP.ini",
+		"/D/wamp/www/html5/game/js/ball.js",
+		"/D/wamp/www/html5/game/arrow.html",
+		"/D/wamp/www/html5/game/js/arrow.js",
+		"/D/wamp/www/html5/game/touch.html",
+		"/D/wamp/www/html5/game/css/style.css",
+		"/D/启动虚拟wifi.bat"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"memory",
+			"max",
+			"showClock",
+			"hideClock",
+			"QQFloat",
+			"prodname",
+			"<img",
+			"<script",
+			"src=\"/style",
+			"socket",
+			"sockets",
+			"socket",
+			"ext"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "canvas.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 195.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

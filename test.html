@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<link rel="stylesheet" type="text/css" href="./css/style.css" />
+</head>
+<body>
+<canvas id="canvas" width="400" height="400"></canvas>
+<script type="text/javascript" src="./js/utils.js"></script>
+<script type="text/javascript">
+window.onload = function(){
+	console.log("abcdef".substr(-2, 2));
+	console.log(0xFF55FF);
+	var hexColor = '#' + (16733683).toString(16);
+	var color = window.parseInt(hexColor.slice(1), 16);
+	console.log(color);
+	var arr = [1, 2, 3];
+	arr.forEach(function(element, id){
+		console.log(element + id);
+	});
+	var canvas = document.getElementById("canvas"),
+		mouse = utils.captureMouse(canvas);
+	function onMouseEvent(event){
+		console.log(event.type);
+	};
+
+	function onKeyboardEvent(event){
+		switch(event.keyCode){
+			case 38:
+				console.log("up");
+			break;
+
+			case 40:
+				console.log("down");
+			break;
+
+			case 37:
+				console.log("left");
+			break;
+
+			case 39:
+				console.log("right");
+
+			default:
+				console.log(event.keyCode);
+		}
+	}
+	window.addEventListener('keydown', onKeyboardEvent, false);
+	//window.addEventListener('keyup', onKeyboardEvent, false);
+	canvas.addEventListener('mousedown', onMouseEvent, false);
+	canvas.addEventListener('mouseup', onMouseEvent, false);
+	canvas.addEventListener('click', onMouseEvent, false);
+	canvas.addEventListener('dblclick', onMouseEvent, false);
+	canvas.addEventListener('mousewheel', onMouseEvent, false);
+	canvas.addEventListener('mousemove', function(){
+		console.log("x:" + mouse.x + ", y:" + mouse.y);
+	}, false);
+	canvas.addEventListener('mouseover', onMouseEvent, false);
+	canvas.addEventListener('mouseout', onMouseEvent, false);
+}
+</script>
+</body>
+</html>

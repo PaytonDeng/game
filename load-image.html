@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Load Image</title>
+<link rel="stylesheet" type="text/css" href="./css/style.css" />
+<style type="text/css">
+#xizhi{
+	display: none;
+}
+</style>
+<script type="text/javascript" src="./js/utils.js"></script>
+</head>
+<body>
+<canvas id="canvas" width="400" height="400"></canvas>
+<script type="text/javascript">
+window.onload = function(){
+	var canvas = document.getElementById('canvas'),
+		context = canvas.getContext('2d');
+		//image = new Image(),
+		//xizhiImage = document.getElementById('xizhi');
+
+	for(var i=0; i<=canvas.width; i+=10){
+		//行
+		for(var j=0; j<=canvas.height; j+=10){
+			//列
+			var rgb = ( i % 20 === 0) ? '#f00' : (i % 30 ===0) ? "#0f0" : '#00f';
+			context.fillStyle = rgb;
+			context.fillRect(j, i, 10, 10);
+		}
+	}
+
+	//image.src = "./images/1.jpg";
+	/*image.onload = function(){
+		var desWidth = 130,
+			desHeight = image.height * desWidth / image.width;
+		context.drawImage(image, 137 ,0, 215, 426, 50, 0, 215, 426);
+	}*/
+
+	//context.drawImage(xizhiImage, 270, 0);
+	//context.drawImage(image, dx, dy);
+	//context.drawImage(image, dx, dy, dw, dh);
+	//context.drawImage(image, sx, sy, sw, sh, dx, dy , dw, dh);
+
+
+	var imageData = context.getImageData(0, 0, canvas.width, canvas.height),
+			pixels = imageData.data;
+	//pixel iteration
+	for(var offset=0, len=pixels.length; offset<len; offset+=4){
+		var r = pixels[offset],
+			g = pixels[offset+1],
+			b = pixels[offset+2],
+			y = (0.2126 * r) + (0.7152 * g) + (0.0722 * b); //luminance(亮度)
+		pixels[offset] = pixels[offset+1] = pixels[offset+2] = y;
+		/*pixels[offset] = 255-pixels[offset]; //red
+		pixels[offset+1] = 255-pixels[offset+1]; //green
+		pixels[offset+2] = 255-pixels[offset+2]; //blue
+		pixels[offset+3] = pixels[offset+3]; //alpha*/
+	}
+	context.putImageData(imageData, 0, 0);		
+}
+function log(msg){
+		var msg = msg ? msg : "null";
+		console.log(msg);
+	}
+</script>
+<img id="xizhi" src="./images/2.jpg" alt="希志爱野女神" title="我最爱的希志爱野女神" />
+</body>
+</html>

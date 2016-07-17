@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<link rel="stylesheet" href="./css/style.css" />
+<script src="./js/utils.js"></script>
+<script src="./js/ball.js"></script>
+</head>
+<body>
+<canvas id="canvas" width="1000" height="400"></canvas>
+<script type="text/javascript">
+window.onload = function(){
+	var canvas = document.getElementById('canvas'),
+		context = canvas.getContext('2d'),
+		ball = new Ball(),
+		/*angle = -90,
+		speed = 1;*/
+		vx = 0,
+		vy = 0,
+		ax = 0.1,
+		ay = 0.1;
+
+	ball.x = 0;
+	ball.y = canvas.height / 2;
+
+	window.addEventListener('keydown', function(event){
+		switch(event.keyCode){
+			case 37: //left
+				ax = -0.1;
+				break;
+			case 39: //right
+				ax = 0.1;
+				break;
+			case 38: //down
+				ay = -0.1;
+				break;
+			case 40: //up
+				ay = 0.1;
+				break;
+		}
+	}, false);
+
+	window.addEventListener('keyup', function(event){
+		ax = 0;
+		ay = 0;
+	}, false);
+
+	(function drawFrame(){
+		window.requestAnimationFrame(drawFrame, canvas);
+		context.clearRect(0, 0, canvas.width, canvas.height);
+
+		/*var radians = angle * Math.PI / 180,
+			vx = Math.cos(radians) * speed,
+			vy = Math.sin(radians) * speed;
+
+		if(ball.x < 0 || ball.y < 0){
+			return false;
+		} else {
+			ball.x += vx;
+			ball.y += vy;
+		}*/
+		vx += ax;
+		vy += ay;
+		ball.x += vx;
+		ball.y += vy;
+		ball.draw(context);
+	}());		
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Multi Curve</title>
+<link rel="stylesheet" type="text/css" href="./css/style.css" />
+<script type="text/javascript" src="./js/utils.js"></script>
+</head>
+<body>
+<canvas id="canvas" width="400" height="400"></canvas>
+<script type="text/javascript">
+window.onload = function(){
+	var canvas = document.getElementById('canvas'),
+		context = canvas.getContext('2d'),
+		points = [],
+		numPoints = 809,
+		ctrlPoint = {};
+
+	for(var i=0; i<numPoints; i++){
+		points.push({
+			x: Math.random() * canvas.width,
+			y: Math.random() * canvas.height
+		});
+	}
+
+	context.beginPath();
+	context.moveTo(points[0].x, points[1].y);
+
+	for(i=1; i<numPoints - 2; i++){
+		ctrlPoint.x = (points[i].x + points[i+1].x) / 2;
+		ctrlPoint.y = (points[i].y + points[i+1].y) / 2;
+		context.quadraticCurveTo(points[i].x, points[i].y, ctrlPoint.x, ctrlPoint.y);
+	}
+
+	context.quadraticCurveTo(points[i].x, points[i].y, points[i+1].x, points[i+1].y);
+	context.stroke();
+}
+</script>
+</body>
+</html>

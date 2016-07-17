@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<link rel="stylesheet" type="text/css" href="./css/style.css" />
+</head>
+<body>
+<canvas id="canvas" width="400" height="400"></canvas>
+<script type="text/javascript" src="./js/utils.js"></script>
+<script type="text/javascript">
+window.onload = function(){
+	var canvas = document.getElementById('canvas');
+	function onTouchEvent(event){
+		console.log(event.type);
+	}
+	canvas.addEventListener('touchstart', onTouchEvent, false);
+	canvas.addEventListener('touchend', onTouchEvent, false);
+	canvas.addEventListener('touchmove', onTouchEvent, false);
+}
+</script>
+</body>
+</html>

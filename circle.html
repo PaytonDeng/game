@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Circle</title>
+<link rel="stylesheet" type="text/css" href="./css/style.css" />
+</head>
+<body>
+<canvas id="canvas" width="1200" height="400"></canvas>
+<script type="text/javascript" src="./js/utils.js"></script>
+<script type="text/javascript" src="./js/ball.js"></script>
+<script type="text/javascript">
+window.onload = function(){
+	var canvas = document.getElementById('canvas'),
+		context = canvas.getContext('2d'),
+		ball = new Ball(),
+		angle = 0,
+		centerX = canvas.width / 2,
+		centerY = canvas.height / 2,
+		radius = 150,
+		speed = 0.001;
+
+	(function drawFrame(){
+		window.requestAnimationFrame(drawFrame, canvas);
+		context.clearRect(0, 0, canvas.width, canvas.height);
+
+		ball.x = centerX + Math.sin(angle) * radius;
+		ball.y = centerY + Math.cos(angle) * radius;
+		angle += speed;
+		ball.draw(context);
+	})()
+}
+</script>
+</body>
+</html>
