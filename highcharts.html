@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Service Status</title>
+  <style>
+    #serviceStatus {
+      min-width: 400px;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="serviceStatus"></div>
+  <script src="http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
+  <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+  <script src="http://cdn.hcharts.cn/highcharts/highcharts-more.js"></script>
+  <script src="http://cdn.hcharts.cn/highcharts/themes/dark-unica.js"></script>
+  <script>
+    $('#serviceStatus').highcharts({
+        chart: {
+          type: 'columnrange',
+          inverted: true
+        },
+        title: {
+          text: 'Service Status',
+          align: 'left',
+          style: {
+            textTransform: 'lowercase',
+          }
+        },
+        credits: {
+          enabled: false
+        },
+        legend: {
+          enabled: false
+        },
+        xAxis: {
+          categories: ['QQ', 'WeChat', 'Weibo', 'Mail 163', 'Baidu'],
+          gridLineWidth: 1
+        },
+        yAxis: {
+          type: 'datetime',
+          gridLineWidth: 0,
+          title: {
+            text: ''
+          },
+          labels: {
+            formatter: function() {
+              return Highcharts.dateFormat('%H:%M', this.value);
+            }
+          }
+        },
+        plotOptions: {
+          columnrange: {
+            dataLabels: {
+              enabled: false
+            }
+          },
+          series: {
+            stacking: 'normal'
+          },
+        },
+        series: [{
+          name: 'QQ',
+          data: [{
+            x: 0,
+            name: 'running',
+            low: Date.UTC(2016, 11, 4, 0),
+            high: Date.UTC(2016, 11, 4, 17),
+            color: 'green'
+          }, {
+            name: 'inactive',
+            color: 'red',
+            x: 0,
+            low: Date.UTC(2016, 11, 4, 17),
+            high: Date.UTC(2016, 11, 4, 18), 
+          }, {
+            name: 'Not Configured',
+            color: 'blue',
+            x: 0,
+            low: Date.UTC(2016, 11, 4, 18),
+            high: Date.UTC(2016, 11, 4, 23)
+          }]
+        }, {
+          name: 'WeChat',
+          data: [{
+            name: 'running',
+            color: 'green',
+            x: 1,
+            low: Date.UTC(2016, 11, 4, 0),
+            high: Date.UTC(2016, 11, 4, 23)
+          }, ]
+        }, {
+          name: 'Weibo',
+          data: [{
+            name: 'inactive',
+            color: 'red',
+            x: 2,
+            low: Date.UTC(2016, 11, 4, 0),
+            high: Date.UTC(2016, 11, 4, 12)
+          }, {
+            name: 'running',
+            color: 'green',
+            x: 2,
+            low: Date.UTC(2016, 11, 4, 12),
+            high: Date.UTC(2016, 11, 4, 23)
+          }]
+        }, {
+          name: 'Mail',
+          data: [{
+            name: 'inactive',
+            color: 'red',
+            x: 3,
+            low: Date.UTC(2016, 11, 4, 0),
+            high: Date.UTC(2016, 11, 4, 18)
+          }, {
+            name: 'running',
+            color: 'green',
+            x: 3,
+            low: Date.UTC(2016, 11, 4, 18),
+            high: Date.UTC(2016, 11, 4, 23)
+          }]
+        }, {
+          name: 'Baidu',
+          data: [{
+            name: 'inactive',
+            color: 'red',
+            x: 4,
+            low: Date.UTC(2016, 11, 4, 0),
+            high: Date.UTC(2016, 11, 4, 18)
+          }, {
+            name: 'running',
+            color: 'green',
+            x: 4,
+            low: Date.UTC(2016, 11, 4, 18),
+            high: Date.UTC(2016, 11, 4, 23)
+          }]
+        }],
+
+        tooltip: {
+          formatter: function() {
+            return '<b>' + this.point.options.name + '</b><br/>' +
+              'Start: ' + Highcharts.dateFormat('%Y-%m-%d %H:%M', this.point.options.low);
+          }
+        },
+    });
+  </script>
+</body>
+</html>
